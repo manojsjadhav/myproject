@@ -378,7 +378,7 @@ async function getmethod() {
   const res = await resp.json();
   console.log(res);
 }
-getmethod();
+// getmethod();
 
 // &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 // let die1 = Math.ceil(Math.random() * 6);
@@ -386,12 +386,22 @@ getmethod();
 
 // console.log(`You rolled a ${die1} and a ${die2}. They sum to ${die1 + die2}`);
 
-function test1() {
-  const nu = 10;
-  function test() {
-    let xzy = 20;
-    return nu + xzy;
-  }
-  return test();
+function test() {
+  const obj1 = { name: "manoj" };
+  const test1 = () => {
+    // console.log("this object", this);
+  };
+  return test1();
 }
-console.log(test1());
+test();
+
+const obje = {
+  name: "manoj",
+  lname: "jadhav",
+  fullname: {
+    getname: () => {
+      console.log("this", this);
+    },
+  },
+};
+obje.fullname.getname();
